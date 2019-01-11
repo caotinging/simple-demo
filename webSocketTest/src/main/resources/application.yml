@@ -1,0 +1,18 @@
+##### spring #####
+spring:
+  profiles:
+    active: @profiles.active@
+  main:
+    banner-mode: "console"
+  application:
+    name: studyDemo
+  output:
+    ansi:
+      enabled: always
+
+##### log #####
+logging:
+  level:
+    root: info
+    org.springframework.web: warn
+    com.hnpolice.messagepush: debug
