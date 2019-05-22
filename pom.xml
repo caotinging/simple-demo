@@ -13,8 +13,8 @@
     </modules>
     <packaging>pom</packaging>
 
-    <name>toutiao-adapters</name>
-    <description>适配器</description>
+    <name>simple-demo</name>
+    <description>钻研技术用的demo</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -134,35 +134,5 @@
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
-
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <profiles.active>dev</profiles.active>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <id>sit</id>
-            <properties>
-                <profiles.active>sit</profiles.active>
-            </properties>
-        </profile>
-        <profile>
-            <id>uat</id>
-            <properties>
-                <profiles.active>uat</profiles.active>
-            </properties>
-        </profile>
-        <profile>
-            <id>prd</id>
-            <properties>
-                <profiles.active>prd</profiles.active>
-            </properties>
-        </profile>
-    </profiles>
 
 </project>
