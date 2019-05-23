@@ -10,6 +10,7 @@
     <modules>
         <module>redis-demo</module>
         <module>webSocketTest</module>
+        <module>springboot-dynamic-task</module>
     </modules>
     <packaging>pom</packaging>
 
