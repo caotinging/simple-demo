@@ -4,7 +4,7 @@ import java.util.concurrent.ScheduledFuture;
 
 /**
  * @program: simple-demo
- * @description: 定时任务类
+ * @description: 定时任务控制类
  * @author: CaoTing
  * @date: 2019/5/23
  **/

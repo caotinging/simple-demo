@@ -28,6 +28,11 @@ public class CronTaskRegistrar implements DisposableBean {
         return this.taskScheduler;
     }
 
+    /**
+     * 新增定时任务
+     * @param task
+     * @param cronExpression
+     */
     public void addCronTask(Runnable task, String cronExpression) {
         addCronTask(new CronTask(task, cronExpression));
     }
@@ -43,6 +48,10 @@ public class CronTaskRegistrar implements DisposableBean {
         }
     }
 
+    /**
+     * 移除定时任务
+     * @param task
+     */
     public void removeCronTask(Runnable task) {
         ScheduledTask scheduledTask = this.scheduledTasks.remove(task);
         if (scheduledTask != null)
