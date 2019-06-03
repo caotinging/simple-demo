@@ -11,6 +11,7 @@
         <module>redis-demo</module>
         <module>webSocketTest</module>
         <module>springboot-dynamic-task</module>
+        <module>springboot-yml-value</module>
     </modules>
     <packaging>pom</packaging>
 
