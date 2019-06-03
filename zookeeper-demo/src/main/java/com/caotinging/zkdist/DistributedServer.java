@@ -1,16 +1,12 @@
 package com.caotinging.zkdist;
 
-import java.io.IOException;
-import java.util.concurrent.CountDownLatch;
-
-import org.apache.zookeeper.CreateMode;
-import org.apache.zookeeper.KeeperException;
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.*;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooDefs.Ids;
-import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
+
+import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * 服务上下线感知服务端
