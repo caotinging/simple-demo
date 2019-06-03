@@ -29,6 +29,6 @@ ps: test目录下的单元测试类里进行测试哦
 
 ## springboot-yml-value
 
-[拒绝臃肿：更优雅的获取springboot yml值]() 
+[拒绝臃肿：更优雅的获取springboot yml值](https://juejin.im/post/5cf49068e51d45105d63a4b3) 
 
 ps: test目录下的单元测试类里进行测试哦
