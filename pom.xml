@@ -9,8 +9,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>redis-demo</module>
-        <module>zookeepr-demo</module>
-        <module>webSocketTest</module>
+        <module>zookeeper-demo</module>
+        <module>websocket-demo</module>
         <module>springboot-dynamic-task</module>
         <module>springboot-yml-value</module>
     </modules>

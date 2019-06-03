@@ -1,0 +1,4 @@
+server:
+#address: 127.0.0.1
+  port: 8084
+  servlet.context-path: /websocket-demo

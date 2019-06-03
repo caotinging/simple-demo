@@ -1,8 +1,8 @@
 package test;
 
-import com.caotinging.demo.application.DynamicTaskApplication;
-import com.caotinging.demo.application.SchedulingRunnable;
-import com.caotinging.demo.config.CronTaskRegistrar;
+import com.caotinging.taskdemo.application.DynamicTaskApplication;
+import com.caotinging.taskdemo.application.SchedulingRunnable;
+import com.caotinging.taskdemo.config.CronTaskRegistrar;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
