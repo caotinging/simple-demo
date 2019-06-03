@@ -1,4 +1,0 @@
-server:
-  port: ${port:8180}
-  servlet:
-    context-path: /studyDemo
