@@ -1,0 +1,8 @@
+server:
+    url: http://myapp.org 
+    app:
+        name: MyApplication
+        threadCount: 10
+        users: 
+          - Jacob
+          - James
