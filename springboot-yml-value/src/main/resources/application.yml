@@ -6,3 +6,8 @@ server:
         users: 
           - Jacob
           - James
+
+orgs:
+    - math
+    - chinese
+    - english

@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @program: simple-demo
- * @description: 映射属性
+ * @description: 映射Server属性
  * @author: CaoTing
  * @date: 2019/6/3
  **/

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @date: 2019/6/3
  **/
 @Configuration
-@EnableConfigurationProperties({ServerProperties.class})
+@EnableConfigurationProperties({ServerProperties.class,OrgProperties.class})
 public class ApplicationConfig {
  
 }
