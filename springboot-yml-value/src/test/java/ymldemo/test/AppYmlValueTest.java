@@ -1,6 +1,7 @@
 package ymldemo.test;
 
 import com.caotinging.ymldemo.application.YmlValueApplication;
+import com.caotinging.ymldemo.config.OrgProperties;
 import com.caotinging.ymldemo.config.ServerProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,11 +22,21 @@ public class AppYmlValueTest {
     @Autowired
     private ServerProperties config;
 
+    @Autowired
+    private OrgProperties orgProperties;
+
     @Test
     public void printConfigs() {
-            System.out.println(this.config.getUrl());
-            System.out.println(this.config.getApp().getName());
-            System.out.println(this.config.getApp().getThreadCount());
-            System.out.println(this.config.getApp().getUsers());
+        System.out.println(this.config.getUrl());
+        System.out.println(this.config.getApp().getName());
+        System.out.println(this.config.getApp().getThreadCount());
+        System.out.println(this.config.getApp().getUsers());
+    }
+
+    @Test
+    public void printOrgList() {
+        for (String s : orgProperties.getOrgs()) {
+            System.out.println(s);
+        }
     }
 }
