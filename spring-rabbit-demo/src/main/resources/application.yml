@@ -1,0 +1,34 @@
+server:
+  port: 7973
+  servlet:
+    context-path: /spring-rabbit
+##### spring #####
+spring:
+  main:
+    banner-mode: "console"
+  application:
+    name: telparse-data
+  output:
+    ansi:
+      enabled: always
+  http:
+    converters:
+      preferred-json-mapper: fastjson
+  devtools:
+    restart:
+      enabled: true
+  rabbitmq:
+    host: 172.18.1.151
+    port: 5672
+    username: admin
+    password: admin
+    publisher-confirms: true
+    virtual-host: /
+##### log #####
+logging:
+  level:
+    root: info
+    org.springframework.web: warn
+    com.hnpolice.mapservice.dao: debug
+
+    
