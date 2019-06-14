@@ -13,6 +13,7 @@
         <module>websocket-demo</module>
         <module>springboot-dynamic-task</module>
         <module>springboot-yml-value</module>
+        <module>nio-demo</module>
     </modules>
     <packaging>pom</packaging>
 
