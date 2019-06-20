@@ -1,4 +1,4 @@
-package com.bise.springrabbitdemo.test;
+package com.bise.mqdemo.test;
 
 import com.bise.mqdemo.bootstrap.MapServiceWebApplication;
 import com.bise.mqdemo.sender.FanoutSender;
