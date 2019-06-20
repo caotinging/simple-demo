@@ -1,13 +1,13 @@
 server:
   port: 7973
   servlet:
-    context-path: /spring-rabbit
+    context-path: /springboot-rabbitmq
 ##### spring #####
 spring:
   main:
     banner-mode: "console"
   application:
-    name: telparse-data
+    name: springboot-rabbitmq
   output:
     ansi:
       enabled: always
@@ -18,7 +18,7 @@ spring:
     restart:
       enabled: true
   rabbitmq:
-    host: 172.18.1.151
+    host: 127.0.0.1
     port: 5672
     username: admin
     password: admin

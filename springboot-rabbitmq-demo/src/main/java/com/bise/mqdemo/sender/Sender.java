@@ -1,4 +1,4 @@
-package com.bise.springrabbitdemo.sender;
+package com.bise.mqdemo.sender;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,4 @@ public class Sender {
         System.out.println("Sender : " + context);
         this.rabbitTemplate.convertAndSend("hello", context);
     }
-
-
-
 }

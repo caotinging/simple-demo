@@ -1,4 +1,4 @@
-package com.bise.springrabbitdemo.config;
+package com.bise.mqdemo.config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
