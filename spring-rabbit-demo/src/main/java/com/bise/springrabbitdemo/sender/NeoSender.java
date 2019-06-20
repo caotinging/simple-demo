@@ -20,7 +20,7 @@ public class NeoSender {
     public void send(int i) {
         String context = "hello " + i;
         System.out.println("NeoSender : " + context);
-        this.rabbitTemplate.convertAndSend("helloExchange","aaa.A", context);
+        this.rabbitTemplate.convertAndSend("helloExchange1","aaa.A", context);
     }
 
 

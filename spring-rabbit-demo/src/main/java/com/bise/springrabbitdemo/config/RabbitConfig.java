@@ -11,31 +11,30 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class RabbitConfig {
-/*
     @Bean
     public Queue helloAQueue() {
-        return new Queue("hello.A");
+        return new Queue("hello.C" ,true);
     }
 
     @Bean
     public Queue helloBQueue() {
-        return new Queue("hello.B");
+        return new Queue("hello.D" ,true);
     }
 
     @Bean
    TopicExchange helloExchange() {
-        return new TopicExchange("helloExchange");
+        return new TopicExchange("helloExchange1" ,true ,false);
     }
 
     @Bean
     Binding bindingExchangeA() {
         return BindingBuilder.bind(helloAQueue()).to(helloExchange()).with("aaa.A");
-    }*/
+    }
 
-/*    @Bean
+    @Bean
     Binding bindingExchangeB() {
-        return BindingBuilder.bind(helloBQueue()).to(helloExchange()).with("hello.bbc.#");
-    }*/
+        return BindingBuilder.bind(helloBQueue()).to(helloExchange()).with("aaa.A");
+    }
 
 
 }

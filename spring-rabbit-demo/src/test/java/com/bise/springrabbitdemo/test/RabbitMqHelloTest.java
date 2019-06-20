@@ -37,9 +37,9 @@ public class RabbitMqHelloTest {
 
     @Test
     public void oneToMany() throws Exception {
-        for (int i=0;i<103;i++){
+      /*  for (int i=0;i<103;i++){
             neoSender.send(i);
-        }
+        }*/
     }
 /*
     @Test
