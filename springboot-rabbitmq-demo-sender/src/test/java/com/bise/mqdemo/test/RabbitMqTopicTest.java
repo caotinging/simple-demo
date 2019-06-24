@@ -17,35 +17,21 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = SenderApplication.class)
-public class RabbitMqHelloTest {
+public class RabbitMqTopicTest {
 
 
     @Autowired
-    private TopicSender helloSender;
+    private TopicSender topicSender;
 
-    @Autowired
-    private NeoSender neoSender;
-
-    @Autowired
-    private FanoutSender fanoutSender;
-
- /*   @Test
+   @Test
     public void hello() throws Exception {
-        helloSender.send();
-    }*/
-
-    @Test
-    public void oneToMany() throws Exception {
-      /*  for (int i=0;i<103;i++){
-            neoSender.send(i);
-        }*/
+       topicSender.sendA();
+       Thread.sleep(1000);
+       topicSender.sendB();
+       Thread.sleep(1000);
+       topicSender.sendC();
+       Thread.sleep(1000);
+       topicSender.sendD();
     }
-/*
-    @Test
-    public void fanoutToMany() throws Exception {
-        for (int i=0;i<100;i++){
-            fanoutSender.send(i);
-        }
-    }*/
 
 }

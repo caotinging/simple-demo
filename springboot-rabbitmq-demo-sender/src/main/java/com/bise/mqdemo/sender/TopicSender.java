@@ -18,27 +18,27 @@ public class TopicSender {
     private AmqpTemplate rabbitTemplate;
 
     public void sendA() {
-        String context = "hello " + new Date();
-        System.out.println("Sender : " + context);
-        this.rabbitTemplate.convertAndSend("hello", context);
+        String context = "helloA " + new Date();
+        System.out.println("SenderA : " + context);
+        this.rabbitTemplate.convertAndSend("TopicHelloExchange","TopicHello.A.A.A", context);
     }
 
     public void sendB() {
-        String context = "hello " + new Date();
-        System.out.println("Sender : " + context);
-        this.rabbitTemplate.convertAndSend("hello", context);
+        String context = "helloB " + new Date();
+        System.out.println("SenderB : " + context);
+        this.rabbitTemplate.convertAndSend("TopicHelloExchange" ,"B.BB.BBB.TopicHello" , context);
     }
 
     public void sendC() {
-        String context = "hello " + new Date();
-        System.out.println("Sender : " + context);
-        this.rabbitTemplate.convertAndSend("hello", context);
+        String context = "helloC " + new Date();
+        System.out.println("SenderC : " + context);
+        this.rabbitTemplate.convertAndSend("TopicHelloExchange","TopicHello.C" , context);
     }
 
     public void sendD() {
-        String context = "hello " + new Date();
-        System.out.println("Sender : " + context);
-        this.rabbitTemplate.convertAndSend("hello", context);
+        String context = "helloD " + new Date();
+        System.out.println("SenderD : " + context);
+        this.rabbitTemplate.convertAndSend("TopicHelloExchange","D.DDD.DDD" , context);
     }
 
 }

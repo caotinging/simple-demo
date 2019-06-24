@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @Version 1.0
  */
 @Component
-public class Receiver {
+public class TopicReceiver {
 
     @RabbitListener(queues = "TopicHelloA")
     public void processTopicA(String hello) {
@@ -28,7 +28,7 @@ public class Receiver {
 
     @RabbitListener(queues = "TopicHelloD")
     public void processTopicD(String hello) {
-        System.out.println("TopicReceiver '*.#': " + hello);
+        System.out.println("TopicReceiver '#': " + hello);
     }
 
 }

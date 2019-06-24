@@ -53,19 +53,31 @@ public class TopicRabbitConfig {
      */
     @Bean
     Binding bindingExchangeA() {
-        return BindingBuilder.bind(helloQueueA()).to(helloExchange()).with("TopicHello.A");
+        /*
+        * TopicHello.A.A.A 必须要routingKey完全一致才能收到
+        * */
+        return BindingBuilder.bind(helloQueueA()).to(helloExchange()).with("TopicHello.A.A.A");
     }
     @Bean
     Binding bindingExchangeB() {
+        /*
+         * #.TopicHello ‘#’可以为任意个单词，单词以‘.’来分割
+         * */
         return BindingBuilder.bind(helloQueueB()).to(helloExchange()).with("#.TopicHello");
     }
     @Bean
     Binding bindingExchangeC() {
+        /*
+         * TopicHello.* ‘*’为一个单词，单词以‘.’来分割
+         * */
         return BindingBuilder.bind(helloQueueC()).to(helloExchange()).with("TopicHello.*");
     }
     @Bean
     Binding bindingExchangeD() {
-        return BindingBuilder.bind(helloQueueD()).to(helloExchange()).with("*.#");
+        /*
+         * # 单独一个‘#’代表任何消息都能接收
+         * */
+        return BindingBuilder.bind(helloQueueD()).to(helloExchange()).with("#");
     }
 
 }
