@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * @Desc: Fanout交换机 队列配置
  * @Author: bise
  * @Date: 2019/6/14 15:52
  * @Version 1.0

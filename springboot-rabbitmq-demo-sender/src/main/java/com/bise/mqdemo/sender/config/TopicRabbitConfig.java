@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * @Desc: Topic交换机 队列
  * @Author: bise
  * @Date: 2019/6/14 10:28
  * @Version 1.0
