@@ -4,6 +4,7 @@ import com.bise.mqdemo.sender.bootstrap.SenderApplication;
 import com.bise.mqdemo.sender.FanoutSender;
 import com.bise.mqdemo.sender.NeoSender;
 import com.bise.mqdemo.sender.TopicSender;
+import com.bise.mqdemo.sender.sender.SimpleSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,21 +18,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = SenderApplication.class)
-public class RabbitMqTopicTest {
-
-
+public class RabbitMQTest {
     @Autowired
-    private TopicSender topicSender;
+    private SimpleSender simpleSender;
 
-   @Test
+    @Test
     public void hello() throws Exception {
-       topicSender.sendA();
-       Thread.sleep(1000);
-       topicSender.sendB();
-       Thread.sleep(1000);
-       topicSender.sendC();
-       Thread.sleep(1000);
-       topicSender.sendD();
+        for (int i = 0; i < 10; i++) {
+            simpleSender.send();
+            Thread.sleep(1000);
+        }
     }
-
 }

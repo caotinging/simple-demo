@@ -14,7 +14,6 @@
         <module>springboot-dynamic-task</module>
         <module>springboot-yml-value</module>
         <module>springboot-rabbitmq-demo-sender</module>
-        <module>springboot-rabbitmq-demo-receiver</module>
     </modules>
     <packaging>pom</packaging>
 
