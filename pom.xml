@@ -13,7 +13,7 @@
         <module>websocket-demo</module>
         <module>springboot-dynamic-task</module>
         <module>springboot-yml-value</module>
-        <module>springboot-rabbitmq-demo-sender</module>
+        <module>springboot-rabbitmq-demo</module>
     </modules>
     <packaging>pom</packaging>
 

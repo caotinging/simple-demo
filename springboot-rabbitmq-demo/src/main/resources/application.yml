@@ -1,13 +1,13 @@
 server:
   port: 7974
   servlet:
-    context-path: /springboot-rabbitmq-demo-sender
+    context-path: /springboot-rabbitmq-demo
 ##### spring #####
 spring:
   main:
     banner-mode: "console"
   application:
-    name: springboot-rabbitmq-demo-sender
+    name: springboot-rabbitmq-demo
   output:
     ansi:
       enabled: always
