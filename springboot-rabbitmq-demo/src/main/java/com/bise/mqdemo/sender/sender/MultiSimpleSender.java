@@ -8,12 +8,12 @@ import java.util.Date;
 
 /**
  * @program: simple-demo
- * @description: RabbitMQ入门-消息发送者/生产者
+ * @description:
  * @author: CaoTing
- * @date: 2020/4/7
+ * @date: 2020/4/8
  */
 @Component
-public class SimpleSender {
+public class MultiSimpleSender {
 
     @Autowired
     private AmqpTemplate rabbitMQTemplate;

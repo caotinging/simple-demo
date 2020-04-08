@@ -37,17 +37,17 @@ public class FanoutRabbitConfig {
     }
 
     @Bean
-    Binding bindingExchangeA(Queue AMessage, FanoutExchange fanoutExchange) {
+    Binding fanoutBindingExchangeA(Queue AMessage, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(AMessage).to(fanoutExchange);
     }
 
     @Bean
-    Binding bindingExchangeB(Queue BMessage, FanoutExchange fanoutExchange) {
+    Binding fanoutBindingExchangeB(Queue BMessage, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(BMessage).to(fanoutExchange);
     }
 
     @Bean
-    Binding bindingExchangeC(Queue CMessage, FanoutExchange fanoutExchange) {
+    Binding fanoutBindingExchangeC(Queue CMessage, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(CMessage).to(fanoutExchange);
     }
 
