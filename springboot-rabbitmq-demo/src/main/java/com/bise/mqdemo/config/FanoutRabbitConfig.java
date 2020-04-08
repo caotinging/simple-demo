@@ -1,4 +1,4 @@
-package com.bise.mqdemo.sender.config;
+package com.bise.mqdemo.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

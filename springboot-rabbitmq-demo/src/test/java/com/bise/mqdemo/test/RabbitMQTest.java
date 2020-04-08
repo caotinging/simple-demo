@@ -1,8 +1,8 @@
 package com.bise.mqdemo.test;
 
-import com.bise.mqdemo.sender.bootstrap.SenderApplication;
-import com.bise.mqdemo.sender.sender.MultiSimpleSender;
-import com.bise.mqdemo.sender.sender.SimpleSender;
+import com.bise.mqdemo.bootstrap.SenderApplication;
+import com.bise.mqdemo.sender.MultiSimpleSender;
+import com.bise.mqdemo.sender.SimpleSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

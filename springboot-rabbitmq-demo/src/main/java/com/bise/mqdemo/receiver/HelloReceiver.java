@@ -1,4 +1,4 @@
-package com.bise.mqdemo.sender.receiver;
+package com.bise.mqdemo.receiver;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
