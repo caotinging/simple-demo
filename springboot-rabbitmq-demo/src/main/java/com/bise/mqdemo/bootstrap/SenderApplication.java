@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.bise.mqdemo.sender.**"})
+@ComponentScan(basePackages = {"com.bise.mqdemo.**"})
 public class SenderApplication {
     public static void main(String[] args) {
         SpringApplication.run(SenderApplication.class, args);
