@@ -1,4 +1,4 @@
-package com.bise.mqdemo;
+package com.bise.mqdemo.sender;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

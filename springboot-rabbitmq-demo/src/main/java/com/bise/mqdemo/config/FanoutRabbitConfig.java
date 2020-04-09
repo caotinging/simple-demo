@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Desc: Fanout交换机 队列配置
+ * @Desc: Fanout交换机(消息广播模式-不需要配置路由键） 队列配置
  * @Author: bise
  * @Date: 2019/6/14 15:52
  * @Version 1.0
@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FanoutRabbitConfig {
 
+    // ==================定义一组队列=====================
     @Bean
     public Queue AMessage() {
         return new Queue("fanout.A");
@@ -30,12 +31,16 @@ public class FanoutRabbitConfig {
     public Queue CMessage() {
         return new Queue("fanout.C");
     }
+    // ==================================================
 
+    // =================定义一个fanout交换机===============
     @Bean
     FanoutExchange fanoutExchange() {
         return new FanoutExchange("fanoutExchange");
     }
+    // ===================================================
 
+    // ===============绑定队列和交换机======================
     @Bean
     Binding fanoutBindingExchangeA(Queue AMessage, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(AMessage).to(fanoutExchange);
@@ -50,5 +55,5 @@ public class FanoutRabbitConfig {
     Binding fanoutBindingExchangeC(Queue CMessage, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(CMessage).to(fanoutExchange);
     }
-
+    // ===================================================
 }

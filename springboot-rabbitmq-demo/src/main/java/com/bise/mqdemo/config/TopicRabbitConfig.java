@@ -38,11 +38,11 @@ public class TopicRabbitConfig {
     }
 
 
-    /**
-     * 创建交换机
-     * @return
-     */
-    @Bean
+   /**
+    * 创建交换机
+    * @return
+   */
+   @Bean
    TopicExchange helloExchange() {
         return new TopicExchange("TopicHelloExchange" ,true ,false);
     }

@@ -33,4 +33,22 @@ public class HelloReceiver {
     public void process3(String hello) {
         System.out.println("Receiver3  : " + hello);
     }
+
+    @RabbitHandler
+    @RabbitListener(queues = "TopicHelloA")
+    public void receiverTopicA(String message) {
+        System.out.println("TopicHelloA :" + message);
+    }
+
+    @RabbitHandler
+    @RabbitListener(queues = {"TopicHelloB","TopicHelloC"})
+    public void receiverTopicBC(String message) {
+        System.out.println("TopicHello [BC]: " + message);
+    }
+
+    @RabbitHandler
+    @RabbitListener(queues = "TopicHelloD")
+    public void receiverTopicD(String message) {
+        System.out.println("TopicHelloD : "+message);
+    }
 }

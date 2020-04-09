@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @program: simple-demo
- * @description: RabbitMQ入门
+ * @description: RabbitMQ入门 默认的Direct交换机
  * @author: CaoTing
  * @date: 2020/4/7
  */
