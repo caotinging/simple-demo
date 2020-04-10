@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @date: 2020/4/7
  */
 @Component
-public class HelloReceiver {
+public class RabbitReceiver {
 
     @RabbitHandler
     @RabbitListener(queues = {"helloMQ"})
@@ -41,14 +41,27 @@ public class HelloReceiver {
     }
 
     @RabbitHandler
-    @RabbitListener(queues = {"TopicHelloB","TopicHelloC"})
-    public void receiverTopicBC(String message) {
-        System.out.println("TopicHello [BC]: " + message);
+    @RabbitListener(queues = {"TopicHelloB","TopicHelloD"})
+    public void receiverTopicBC(Object message) {
+        System.out.println("TopicHello [BD]: " + message);
+        System.out.println("==");
     }
 
     @RabbitHandler
-    @RabbitListener(queues = "TopicHelloD")
-    public void receiverTopicD(String message) {
-        System.out.println("TopicHelloD : "+message);
+    @RabbitListener(queues = "fanout.A")
+    public void receiverFanoutA(String message) {
+        System.out.println("FanoutA :" + message);
+    }
+
+    @RabbitHandler
+    @RabbitListener(queues = "fanout.B")
+    public void receiverFanoutB(String message) {
+        System.out.println("FanoutB :" + message);
+    }
+
+    @RabbitHandler
+    @RabbitListener(queues = "TopicHelloC")
+    public void receiverUser(User user) {
+        System.out.println("TopicHelloC: " +user.toString());
     }
 }

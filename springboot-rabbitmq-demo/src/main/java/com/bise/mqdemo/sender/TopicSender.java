@@ -31,10 +31,4 @@ public class TopicSender {
         String context = "helloC " + new Date();
         this.rabbitTemplate.convertAndSend("TopicHelloExchange","TopicHello.C" , context);
     }
-
-    public void sendD() {
-        String context = "helloD " + new Date();
-        this.rabbitTemplate.convertAndSend("TopicHelloExchange","D.DDD.DDD" , context);
-    }
-
 }

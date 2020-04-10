@@ -78,7 +78,7 @@ public class TopicRabbitConfig {
         /*
          * # 单独一个‘#’代表任何消息都能接收
          * */
-        return BindingBuilder.bind(helloQueueD()).to(helloExchange()).with("#");
+        return BindingBuilder.bind(helloQueueD()).to(helloExchange()).with("#.A.Topic");
     }
 
 }

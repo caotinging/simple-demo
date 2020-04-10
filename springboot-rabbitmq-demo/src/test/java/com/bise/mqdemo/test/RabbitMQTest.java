@@ -1,5 +1,6 @@
 package com.bise.mqdemo.test;
 
+import com.bise.mqdemo.receiver.User;
 import com.bise.mqdemo.sender.TopicSender;
 import com.bise.mqdemo.bootstrap.SenderApplication;
 import com.bise.mqdemo.sender.MultiSimpleSender;
@@ -64,19 +65,40 @@ public class RabbitMQTest {
      * 测试topic交换机
      */
     @Test
-    public void testTopic() {
+    public void testTopic() throws InterruptedException {
         for (int i = 0; i < 10; i++) {
             topicSender.sendA();
             topicSender.sendB();
             topicSender.sendC();
-            topicSender.sendD();
+            Thread.sleep(1000);
         }
     }
 
     @Test
-    public void testTopicSender() {
+    public void testTopicSender() throws InterruptedException {
         for (int i = 0; i < 10; i++) {
             rabbitTemplate.convertAndSend("TopicHelloExchange","TopicHello.A.A.A","测试一下");
+            Thread.sleep(1000);
         }
+    }
+
+    /**
+     * 测试广播交换机 （Fanout）
+     * 广播交换机下绑定的所有队列均会收到消息，即使配置了路由键[routingKey]也会被忽略
+     * @throws InterruptedException
+     */
+    @Test
+    public void testFanoutSender() throws InterruptedException {
+        for (int i = 0; i < 1; i++) {
+            rabbitTemplate.convertAndSend("fanoutExchange","fanout.D", "测试广播交换机");
+            Thread.sleep(1000);
+        }
+    }
+
+    @Test
+    public void testTopicUser() throws InterruptedException {
+        User user = new User("zhangsan","南山区");
+        rabbitTemplate.convertAndSend("TopicHelloExchange","TopicHello.CDD",user);
+        Thread.sleep(1000);
     }
 }
