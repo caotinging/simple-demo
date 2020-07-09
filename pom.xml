@@ -14,6 +14,7 @@
         <module>springboot-dynamic-task</module>
         <module>springboot-yml-value</module>
         <module>springboot-rabbitmq-demo</module>
+        <module>spring-security-oauth2-demo</module>
     </modules>
     <packaging>pom</packaging>
 
