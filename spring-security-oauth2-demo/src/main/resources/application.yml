@@ -10,3 +10,7 @@ spring:
     host: localhost
     port: 6379
     timeout: 5000
+
+config:
+  swagger:
+    enable: true

@@ -1,6 +1,7 @@
 package com.caotinging.oauth2.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -50,9 +51,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) {
-        web.ignoring().antMatchers("/login",
-                "/logout",
+        web.ignoring().antMatchers(
                 "/v2/api-docs",
+                "/static/css/**",
+                "/static/js/**",
                 "/swagger-resources/configuration/ui",
                 "/swagger-resources",
                 "/swagger-resources/configuration/security",
@@ -63,5 +65,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 "/webjars/**",
                 "**/favicon.ico",
                 "/index");
+        web.ignoring().mvcMatchers(HttpMethod.OPTIONS, "/**");
+        web.ignoring().mvcMatchers("/swagger-ui.html/**",
+                "/configuration/**",
+                "/swagger-resources/**",
+                "/v2/api-docs",
+                "/static/css/**",
+                "/static/js/**",
+                "/webjars/**");
     }
 }
